@@ -20,7 +20,10 @@ class ViewController: UIViewController ,UITableViewDataSource{
         
         //Resuable cell object (best practices) (dequeued cell)
         let cell = tableView.dequeueReusableCell(withIdentifier: "normalCell", for: indexPath)
-        cell.textLabel?.text = "This text for cell \(indexPath.row)"
+        cell.textLabel?.text = "cell \(indexPath.row)"
+       cell.imageView?.image = UIImage (named: "coding")
+        cell.accessoryType = .detailButton
+        cell.detailTextLabel?.text = "sub details text"
         return cell
 
     }
