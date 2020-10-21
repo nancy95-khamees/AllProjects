@@ -7,8 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController , UITableViewDataSource {
+class ViewController: UIViewController , UITableViewDataSource , UITableViewDelegate{
 
+    //methods of Delegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print ("you selected row \(indexPath.row) in serction number \(indexPath.section)")
+    }
+    
+    
+    
+    //methods of datasource
     func numberOfSections(in tableView: UITableView) -> Int {
         return 3
     }
