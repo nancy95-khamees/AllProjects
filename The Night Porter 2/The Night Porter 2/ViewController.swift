@@ -67,7 +67,6 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
             case 1:
             self.weaklyTasks[indexPath.row].completed = true
             case 2:
-                //methods of Delegate
             self.monthlyTasks[indexPath.row].completed = true
             default:
                 break
@@ -85,6 +84,9 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
         let mySwithch = sender as! UISwitch
         if mySwithch.isOn {
             view.backgroundColor = UIColor.darkGray
+        
+            
+            
         }else {
             view.backgroundColor = UIColor.white
         }
@@ -169,7 +171,6 @@ class ViewController: UIViewController , UITableViewDataSource , UITableViewDele
     var weaklyTasks = [
         Task(name: "Check inside all cabins", completed: true, type: .weakly, lastcompleted: nil),
         Task(name: "Flush all lavatories in cabins ", completed: false, type: .weakly, lastcompleted: nil),
-        
         Task(name: "Walk perimeter of property ", completed: false, type: .weakly, lastcompleted: nil),
     
     ]
